@@ -1,0 +1,19 @@
+# LIBRADTRAN Input File
+atmosphere_file midlatitude_summer
+
+altitude 0.0 500.0
+output_quantity transmittance
+
+wavelength_grid_file ../examples/DEFAULT.TRANS # Wavelength 785 to 850 spectrum with 5 nm increment
+aerosol_default
+aerosol_haze 6 # Tropospheric
+aerosol_season 1 # Spring-Summer
+
+sza 0.0 # Solar Zenith Angle (0 being over top, elevation angle = 90 - sza)
+phi0 0.0 # Azimuth
+
+slit_function_file ../my_data/modtran_tri_slit.DAT # slit with FWHM of 10 nm
+
+# verbose
+
+output_file ./output_30.out # Output file name
